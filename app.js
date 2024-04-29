@@ -17,6 +17,7 @@ const limiter = RateLimit({
 });
 
 var app = express();
+app.set('trust proxy', true);
 
 app.use(limiter);
 app.use(
